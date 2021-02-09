@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:background="@drawable/square_borders">
+
+        <ImageView
+            android:id="@+id/imagem_roteiro"
+            android:layout_width="157dp"
+            android:layout_height="135dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_slider_3" />
+
+        <TextView
+            android:id="@+id/titulo_roteiro_list"
+            style="@style/EstiloLetraTitulos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginTop="@dimen/small_list_item_margin"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagem_roteiro"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constrainedWidth="true"
+            tools:text="Pelas Ruas do Porto" />
+
+        <TextView
+            android:id="@+id/hashtags_roteiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagem_roteiro"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_roteiro_list"
+            app:layout_constrainedWidth="true"
+            tools:text="#hamburguer #gelados" />
+
+        <TextView
+            android:id="@+id/localizacao_roteiro"
+            style="@style/EstiloLetraTitulos"
+            android:layout_width="80dp"
+            android:layout_height="16dp"
+            android:background="@drawable/grey_background"
+            android:paddingStart="@dimen/small_padding"
+            android:textAlignment="textStart"
+            android:textColor="@color/branco"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/precomedio_roteiro"
+            app:layout_constrainedWidth="true"
+            tools:text="Porto" />
+
+        <ImageView
+            android:id="@+id/icon_classificacao"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginBottom="@dimen/small_list_item_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagem_roteiro"
+            app:srcCompat="@drawable/fui_ic_check_circle_black_128dp" />
+
+        <TextView
+            android:id="@+id/classificacao_roteiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_list_item_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_classificacao"
+            app:layout_constrainedWidth="true"
+            tools:text="9.5/10" />
+
+        <TextView
+            android:id="@+id/precomedio_roteiro"
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:layout_width="76dp"
+            android:layout_height="17dp"
+            android:background="@drawable/grey_background"
+            android:paddingEnd="@dimen/small_padding"
+            android:textAlignment="textEnd"
+            android:textColor="@color/branco"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imagem_roteiro"
+            app:layout_constrainedWidth="true"
+            tools:text="100€" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-52320065:176f64f7a43:-7fe6</id>
+  <name>rede_viaria</name>
+  <nativeName>rede_viaria</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-52320065:176f64f7a43:-7ffe</id>
+  </namespace>
+  <title>rede_viaria</title>
+  <keywords>
+    <string>features</string>
+    <string>rede_viaria</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-118534.859375</minx>
+    <maxx>163304.5</maxx>
+    <miny>-295828.09375</miny>
+    <maxy>275711.625</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-9.566989221701373</minx>
+    <maxx>-6.15793128569929</maxx>
+    <miny>36.98903491350671</miny>
+    <maxy>42.150659948427965</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-52320065:176f64f7a43:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

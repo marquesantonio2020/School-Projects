@@ -1,0 +1,16 @@
+<layer>
+  <name>ifn_2015</name>
+  <id>LayerInfoImpl--4b94eaef:1771a269b9b:-7faa</id>
+  <type>WMS</type>
+  <defaultStyle>
+    <name></name>
+  </defaultStyle>
+  <resource class="wmsLayer">
+    <id>WMSLayerInfoImpl--4b94eaef:1771a269b9b:-7fab</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-19 21:31:37.631 UTC</dateCreated>
+</layer>

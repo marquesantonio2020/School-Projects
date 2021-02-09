@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fcc</id>
+  <name>ecopistas</name>
+  <nativeName>ecopistas</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--4b94eaef:1771a269b9b:-7ffe</id>
+  </namespace>
+  <title>ecopistas</title>
+  <keywords>
+    <string>features</string>
+    <string>ecopistas</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-68601.4765625</minx>
+    <maxx>110421.1015625</maxx>
+    <miny>-122680.0625</miny>
+    <maxy>267480.90625</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-8.962077601759999</minx>
+    <maxx>-6.7989048491005</maxx>
+    <miny>38.556354205852664</miny>
+    <maxy>42.07682864836033</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--4b94eaef:1771a269b9b:-7ffd</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".transportes.Horario">
+
+    <TextView
+        android:id="@+id/empresa_horario_titulo"
+        style="@style/EstiloLetraTitulos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bottom_strokes"
+        tools:text="NomeEmpresa"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/origemSubtitulo"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            android:text="@string/origem"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/destinoSubtitulo"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_list_item_margin"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            android:text="@string/destino"
+            android:textAlignment="center"
+            tools:text="Destino" />
+
+        <TextView
+            android:id="@+id/partidaSubtitulo"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_list_item_margin"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            android:text="@string/partida"
+            android:textAlignment="center"
+            tools:text="Partida" />
+
+        <TextView
+            android:id="@+id/chegadaSubtitulo"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_list_item_margin"
+            android:layout_marginEnd="@dimen/list_text_title"
+            android:text="@string/chegada"
+            android:textAlignment="center"
+            tools:text="chegada" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/horarios_list"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+
+</layout>

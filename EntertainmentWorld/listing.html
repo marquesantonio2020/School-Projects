@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EntertainmentWorld</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="./img/Star_icon_stylized.png" type="image/ico">
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="css/mycss.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/fontawesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>    
+
+<body>
+  <!--Header-->
+  <div id="navigation">
+  <h3 id="navHeader">Entertainment World</h3>
+  <ul>
+    <li><a href="http://localhost:81/SIR2020_2021/EntertainmentWorld/">Home</a></li>
+    <li><a href="http://localhost:81/SIR2020_2021/EntertainmentWorld/comingSoon.html">Coming Soon</a></li>
+    <li><a href="http://localhost:81/SIR2020_2021/EntertainmentWorld/inTheaters.html">In Theaters</a></li>
+  </ul>
+</div>
+<!--Search bar-->
+  <div class="container searchContainer" id="poster" style="width: 1000px;
+  height: 500px;">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto" style="padding-right: 0px !important;">
+        <div id="searchContainer">       
+          <h2>
+            Search
+          </h2>
+          <form id="searchBar" class="searchBar" action="listing.html" method="GET">
+            <i class="fa fa-search" id="searchIcon"></i>
+            <input name="search" id="search" class="form-control search" type="text"
+              placeholder="You type and I provide" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Search result listing-->
+  <div class="container">
+    <div class="row">
+      <div class="display col-lg-8 col-md-10 mx-auto">
+        <div id="listing">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: gray;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align: center;">
+          <ul class="list-inline text-center list" style="padding-top: 10px; margin-left: 100px">
+            <li class="list-inline-item">
+
+              <img src='./img/imdb_api.png' style="width: 100px; height: 100px;">
+              <p>IMDB API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/myapifilms.PNG' style="width: 100px; height: 100px;">
+              <p>MYAPIFILMS API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/newsapi.PNG' style="width: 100px; height: 100px;">
+              <p>NEWSAPI API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/kitsuapi.png' style="width: 100px; height: 100px;">
+              <p>KITSU API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/jinkanapi.png' style="width: 100px; height: 100px;">
+              <p>JINKAN API</p>
+            </li>
+          </ul>
+          <p class="copyright text-muted" style="color: black !important;">Copyright &copy; António Marques - IPVC-ESTG 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script>
+  //On page load these functionalities are implemented
+  window.onload = function(){
+    $(this).on('keypress', function (e) {
+      if (e.keyCode == 13) {
+        const searchType = $('#search').val();
+        if (searchType === "") {
+          alert('Please type something on the search bar')
+        } else {
+          var url = "http://localhost:81/SIR2020_2021/EntertainmentWorld/listing.html?search=" + searchType;
+          window.location.assign(url);
+        }
+      }
+    })
+
+    $('#searchIcon').click(function () {
+      console.log('here')
+      const searchType = $('#search').val();
+      if (searchType === "") {
+        alert('Please type something on the search bar')
+      } else {
+        var url = "http://localhost:81/SIR2020_2021/EntertainmentWorld/listing.html?search=" + searchType;
+        window.location.assign(url);
+      }
+    });
+
+  }
+
+</script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+<!--Research script that consumes the apis necessaries-->
+<script src="./projectJS/fetchData.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
+
+<script type="text/javascript"></script>
+
+</html>

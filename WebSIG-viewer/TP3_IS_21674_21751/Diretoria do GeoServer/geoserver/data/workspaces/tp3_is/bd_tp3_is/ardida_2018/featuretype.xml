@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fc4</id>
+  <name>ardida_2018</name>
+  <nativeName>ardida_2018</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--4b94eaef:1771a269b9b:-7ffe</id>
+  </namespace>
+  <title>ardida_2018</title>
+  <keywords>
+    <string>features</string>
+    <string>ardida_2018</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-116591.1328125</minx>
+    <maxx>141017.390625</maxx>
+    <miny>-293879.59375</miny>
+    <maxy>266471.1875</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-9.54164134722504</minx>
+    <maxx>-6.429597858698933</maxx>
+    <miny>37.01018980528297</miny>
+    <maxy>42.06769403458242</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--4b94eaef:1771a269b9b:-7ffd</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/azulEsmeralda</color>
+    <color name="colorPrimaryDark">#2d2d2d</color>
+    <color name="colorAccent">@color/azulEsmeralda</color>
+
+    <!--Cor dos botões-->
+    <color name="azulEsmeralda">#009688</color>
+    <color name="azulAcizentado">#599688</color>
+
+    <!--Cor do texto do botão-->
+    <color name="branco">#FFFFFF</color>
+
+    <!--Cor do texto-->
+    <color name="texto_branco">#FFFFFF</color>
+    <color name="texto_preto">#000000</color>
+
+    <color name="red">#A52A2A</color>
+</resources>

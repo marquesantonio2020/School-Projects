@@ -1,0 +1,16 @@
+<layer>
+  <name>occurrences_point</name>
+  <id>LayerInfoImpl--1c548f4d:1772953e0a5:-7f94</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--5c1f50e5:17726310d27:-7ffe</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--1c548f4d:1772953e0a5:-7f95</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-22 16:18:01.921 UTC</dateCreated>
+</layer>

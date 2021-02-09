@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-52320065:176f64f7a43:-7fed</id>
+  <name>farmacias_viana</name>
+  <nativeName>farmacias_viana</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-52320065:176f64f7a43:-7ffe</id>
+  </namespace>
+  <title>farmacias_viana</title>
+  <keywords>
+    <string>features</string>
+    <string>farmacias_viana</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-60846.453125</minx>
+    <maxx>-45337.62109375</maxx>
+    <miny>217551.078125</miny>
+    <maxy>234159.984375</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-8.864938879595217</minx>
+    <maxx>-8.67715412524051</maxx>
+    <miny>41.625027507618256</miny>
+    <maxy>41.77559096719009</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-52320065:176f64f7a43:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

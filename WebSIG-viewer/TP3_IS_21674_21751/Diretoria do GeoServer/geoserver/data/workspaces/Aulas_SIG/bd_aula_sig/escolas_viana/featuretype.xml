@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-52320065:176f64f7a43:-7ff3</id>
+  <name>escolas_viana</name>
+  <nativeName>escolas_viana</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-52320065:176f64f7a43:-7ffe</id>
+  </namespace>
+  <title>escolas_viana</title>
+  <keywords>
+    <string>features</string>
+    <string>escolas_viana</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-60839.87109375</minx>
+    <maxx>-44095.2421875</maxx>
+    <miny>217523.078125</miny>
+    <maxy>236858.625</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-8.865136047487972</minx>
+    <maxx>-8.662244292685724</maxx>
+    <miny>41.62477592738665</miny>
+    <maxy>41.799956813327235</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-52320065:176f64f7a43:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

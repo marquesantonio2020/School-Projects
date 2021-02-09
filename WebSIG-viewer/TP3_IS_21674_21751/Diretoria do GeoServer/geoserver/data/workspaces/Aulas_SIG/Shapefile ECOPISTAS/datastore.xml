@@ -1,0 +1,23 @@
+<dataStore>
+  <id>DataStoreInfoImpl-52320065:176f64f7a43:-7fe1</id>
+  <name>Shapefile ECOPISTAS</name>
+  <type>Directory of spatial files (shapefiles)</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-52320065:176f64f7a43:-7fff</id>
+  </workspace>
+  <connectionParameters>
+    <entry key="charset">ISO-8859-1</entry>
+    <entry key="filetype">shapefile</entry>
+    <entry key="create spatial index">true</entry>
+    <entry key="memory mapped buffer">false</entry>
+    <entry key="timezone">Europe/London</entry>
+    <entry key="enable spatial index">true</entry>
+    <entry key="namespace">www.aulas_sig.pt</entry>
+    <entry key="cache and reuse memory maps">true</entry>
+    <entry key="url">file:data/ecopistas</entry>
+    <entry key="fstype">shape</entry>
+  </connectionParameters>
+  <__default>false</__default>
+  <dateCreated>2021-01-12 14:14:35.631 UTC</dateCreated>
+</dataStore>

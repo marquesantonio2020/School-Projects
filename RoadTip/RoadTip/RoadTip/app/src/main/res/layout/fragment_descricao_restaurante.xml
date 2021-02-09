@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/restaurante" />
+
+    <ImageButton
+        android:id="@+id/backarrow"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/small_list_item_margin"
+        android:layout_marginTop="@dimen/small_list_item_margin"
+        android:background="@color/fui_transparent"
+        android:contentDescription="@string/hoteis"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_arrow_back_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/favorito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/list_text_title"
+        android:backgroundTint="@color/fui_transparent"
+        app:srcCompat="@drawable/ic_favorite_border_black_24dp" />
+
+</RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_list_item_margin"
+                android:layout_marginEnd="@dimen/small_list_item_margin"
+                android:layout_marginTop="@dimen/list_text_title"
+                android:background="@drawable/square_borders">
+
+                <TextView
+                    android:id="@+id/titulo_restaurante"
+                    style="@style/EstiloLetraTitulos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/list_text_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Degema Hamburgueria" />
+
+                <TextView
+                    android:id="@+id/criador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titulo_restaurante"
+                    tools:text="Criado Por: degemaoficial" />
+
+                <TextView
+                    android:id="@+id/hashtags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/small_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/criador"
+                    tools:text="#hamburguer #gelados" />
+
+                <TextView
+                    android:id="@+id/localizacao"
+                    style="@style/EstiloLetraTitulos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hashtags"
+                    tools:text="Porto" />
+
+                <ImageView
+                    android:id="@+id/estrela_icon"
+                    android:layout_width="45dp"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="@dimen/margin_twelve"
+                    android:layout_marginEnd="@dimen/small_margin"
+                    app:layout_constraintEnd_toStartOf="@+id/classificacao"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/fui_ic_check_circle_black_128dp" />
+
+                <TextView
+                    android:id="@+id/classificacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="9.5/10" />
+
+                <TextView
+                    android:id="@+id/precomedio"
+                    style="@style/EstiloLetraSubtitulosPreto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/hashtags"
+                    app:layout_constraintTop_toBottomOf="@+id/classificacao"
+                    tools:text="100€" />
+
+                <TextView
+                    android:id="@+id/morada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/small_list_item_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/localizacao"
+                    app:layout_constrainedWidth="true"
+                    tools:text="esta é uma morada exemplo, 252" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/button_adicionar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:background="@drawable/button_round_borders"
+                android:text="@string/botãoAdicionar"
+                android:textColor="@color/branco"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_list_item_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/small_list_item_margin"
+                android:background="@drawable/square_borders">
+
+                <TextView
+                    android:id="@+id/descricao"
+                    style="@style/EstiloLetraTitulos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/list_text_title"
+                    android:text="@string/descrição_subtitulo"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/texto_descricao"
+                    style="@style/EstiloLetraRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/list_text_title"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.35"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descricao"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="Esta é uma descrição um pouco extensa só para possibilitar perceber como é que o texto se irá dispor na constraint layout, por mais extenso que seja" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_list_item_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/small_list_item_margin"
+                android:background="@drawable/square_borders">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

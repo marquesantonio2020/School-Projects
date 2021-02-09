@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fd8</id>
+  <name>estacoes_apeadeiros</name>
+  <nativeName>estacoes_apeadeiros</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--4b94eaef:1771a269b9b:-7ffe</id>
+  </namespace>
+  <title>estacoes_apeadeiros</title>
+  <keywords>
+    <string>features</string>
+    <string>estacoes_apeadeiros</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-111791.4375</minx>
+    <maxx>110735.0</maxx>
+    <miny>-294610.28125</miny>
+    <maxy>265352.40625</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-9.483458967466577</minx>
+    <maxx>-6.7955152353544905</maxx>
+    <miny>37.007536670042775</miny>
+    <maxy>42.05771637784202</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--4b94eaef:1771a269b9b:-7ffd</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/square_borders"
+        android:layout_marginStart="@dimen/item_list_margin"
+        android:layout_marginEnd="@dimen/item_list_margin"
+        android:layout_marginTop="@dimen/item_list_margin">
+
+        <ImageView
+            android:id="@+id/imagem_restaurante"
+            android:layout_width="157dp"
+            android:layout_height="135dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/restaurante" />
+
+        <TextView
+            android:id="@+id/titulo_restaurante"
+            style="@style/EstiloLetraTitulosRestaurante"
+            android:layout_width="212dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginTop="@dimen/small_list_item_margin"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagem_restaurante"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constrainedWidth="true"
+            tools:text="Degema Hamburgueria" />
+
+        <TextView
+            android:id="@+id/criador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagem_restaurante"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_restaurante"
+            app:layout_constrainedWidth="true"
+            tools:text="Criado Por: degemaoficial" />
+
+        <TextView
+            android:id="@+id/hashtags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagem_restaurante"
+            app:layout_constraintTop_toBottomOf="@+id/criador"
+            app:layout_constrainedWidth="true"
+            tools:text="#hamburguer #gelados" />
+
+        <TextView
+            android:id="@+id/localizacao"
+            style="@style/EstiloLetraTitulosRestaurante"
+            android:layout_width="78.5dp"
+            android:layout_height="22dp"
+            android:background="@drawable/grey_background"
+            android:paddingStart="@dimen/small_padding"
+            android:textColor="@color/branco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/precomedio"
+            app:layout_constrainedWidth="true"
+            tools:text="Porto" />
+
+        <ImageView
+            android:id="@+id/icon_classificacao"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/list_text_title"
+            android:layout_marginBottom="@dimen/small_list_item_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imagem_restaurante"
+            app:srcCompat="@drawable/fui_ic_check_circle_black_128dp" />
+
+        <TextView
+            android:id="@+id/classificacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_list_item_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_classificacao"
+            app:layout_constrainedWidth="true"
+            tools:text="9.5/10" />
+
+        <TextView
+            android:id="@+id/precomedio"
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:layout_width="78.5dp"
+            android:layout_height="22dp"
+            android:background="@drawable/grey_background"
+            android:textAlignment="textEnd"
+            android:textColor="@color/branco"
+            android:paddingEnd="@dimen/small_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imagem_restaurante"
+            app:layout_constrainedWidth="true"
+            tools:text="100€" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

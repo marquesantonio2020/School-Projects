@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="roteiroViewModel"
+            type="com.example.roadtip.models.RoteiroViewModel" />
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".roteiro.CriarRoteiroCidade">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/backarrow"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/small_list_item_margin"
+        android:background="@color/fui_transparent"
+        android:contentDescription="@string/hoteis"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/titulo_roteiros"
+        app:layout_constraintStart_toStartOf="@+id/titulo_roteiros"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo_roteiros"
+        style="@style/EstiloLetraTitulos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bottom_strokes"
+        android:text="@string/criarroteiro"
+        android:textAlignment="center"
+        android:padding="@dimen/list_text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/minimapa"
+                android:layout_width="159dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:src="@drawable/mini_mapa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/minimapa" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:id="@+id/nome_roteiro_subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_roteiro"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_nome_roteiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_roteiro"
+                android:inputType="text"
+                android:textColorHint="#FFFFFF"
+                android:textColorLink="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:id="@+id/nome_pais_subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/país_subtitulo"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/default_margin"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_pais_roteiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_país"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:id="@+id/localidade_subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/localidade_subtitulo"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"/>
+
+        <Spinner
+            android:id="@+id/droplist_localidades"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"/>
+
+        <Button
+            android:id="@+id/button_seguinte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/botãoSeguinte"
+            android:textColor="@color/branco"
+            android:background="@drawable/button_round_borders"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+</ScrollView>
+</layout>

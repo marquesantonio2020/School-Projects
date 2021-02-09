@@ -1,0 +1,274 @@
+[
+    {
+      "id": 43,
+      "name": "Santander",
+      "lat": 41.695938,
+      "long": -8.823084,
+      "text": "À direita encontra-se o banco Santander.",
+      "detail": "Informação detalhada - Santander"
+    },
+    {
+      "id": 44,
+      "name": "Delegação A C A P O",
+      "lat": 41.696109,
+      "long": -8.823132,
+      "text": "Aproximamo-nos da rua que dá acesso à delegação A C A P O.",
+      "detail": "Informaçãodetalhada - A C A P O"
+    },
+    {
+      "id": 45,
+      "name": "Jardim Ponte Velha",
+      "lat": 41.69516,
+      "long": -8.822088,
+      "text": "Estamos a chegar ao jardim da ponte velha.",
+      "detail": "Informação detalhada - Jardim Ponte Velha"
+    },
+    {
+      "id": 46,
+      "name": "E D P",
+      "lat": 41.695652,
+      "long": -8.820571,
+      "text": "À esquerda encontra-se a E D P ",
+      "detail": "Informação detalhada - E D P"
+    },
+    {
+      "id": 47,
+      "name": "Igreja do Carmo",
+      "lat": 41.697272,
+      "long": -8.822726,
+      "text": " Encontramo-nos perto da Igreja do Carmo.",
+      "detail": "Informação detalhada - Igreja do Carmo"
+    },
+    {
+      "id": 48,
+      "name": "Viaduto do Carmo",
+      "lat": 41.697532,
+      "long": -8.8238,
+      "text": "Viramos à direita no viaduto do Carmo.",
+      "detail": "Informação detalhada - Viaduto do Carmo"
+    },
+    {
+      "id": 49,
+      "name": "Lateral do Liceu",
+      "lat": 41.698885,
+      "long": -8.823197,
+      "text": "Encontramo-nos na lateral do liceu.",
+      "detail": "Informação detalhada - Liceu"
+    },
+    {
+      "id": 50,
+      "name": "Bombas de Gasolina - Repsol",
+      "lat": 41.699758,
+      "long": -8.824236,
+      "text": "À direita está a bomba de gasolina repsol.",
+      "detail": "Informação detalhada - Repsol"
+    },
+    {
+      "id": 51,
+      "name": "Paragem -  Cadeia",
+      "lat": 41.698998,
+      "long": -8.825374,
+      "text": "Aproximamo-nos da paragem de autocarro ao lado da prisão.",
+      "detail": "Informação detalhada - Cadeia"
+    },
+    {
+      "id": 52,
+      "name": "Cemitério",
+      "lat": 41.699929,
+      "long": -8.827531,
+      "text": "À esquerda situa-se o cemitério.",
+      "detail": "Informação detalhada - Cemitério"
+    },
+    {
+      "id": 53,
+      "name": "Centro de Saúde - Perto Hospital",
+      "lat": 41.697536,
+      "long": -8.829239,
+      "text": "À esquerda encontra-se o centro de saúde perto do Hospital",
+      "detail": "Informação detalhada - I S N perto do Hospital"
+    },
+    {
+      "id": 54,
+      "name": "Elevador Santa Luzia",
+      "lat": 41.696832,
+      "long": -8.829802,
+      "text": "Aproximamo-nos do Elevador de Santa Luzia.",
+      "detail": "Informação detalhada - Elevador"
+    },
+    {
+      "id": 55,
+      "name": "Hospital",
+      "lat": 41.696924,
+      "long": -8.831469,
+      "text": "A chegar ao hospital.",
+      "detail": "Informação detalhada - Hospital"
+    },
+    {
+      "id": 56,
+      "name": "Hospital - Consultas Externas",
+      "lat": 41.697099,
+      "long": -8.832184,
+      "text": "Entrada para as consultas Externas",
+      "detail": "Informação detalhada - Consultas Externas"
+    },
+    {
+      "id": 57,
+      "name": "Passadeira - Estação",
+      "lat": 41.695734,
+      "long": -8.831732,
+      "text": "Estamos a passar a passadeira de acesso à estação de comboios.",
+      "detail": "Informação detalhada - Passadeira Estação"
+    },
+    {
+      "id": 58,
+      "name": "Passadeira - Viaduto Shopping",
+      "lat": 41.693901,
+      "long": -8.833872,
+      "text": " Agora,  chegamos ao viaduto do Shopping.",
+      "detail": "Informação detalhada - Passadeira Viaduto"
+    },
+    {
+      "id": 59,
+      "name": "S A S I P V C",
+      "lat": 41.693272,
+      "long": -8.832574,
+      "text": "Estamos perto dos Serviços de Ação Social do I P V C ",
+      "detail": "Informação detalhada - S A S I P V C"
+    },
+    {
+      "id": 60,
+      "name": "Colégio do Minho",
+      "lat": 41.692717,
+      "long": -8.835145,
+      "text": "À direita está o Colégio do Minho.",
+      "detail": "Informação detalhada - Colégio Minho"
+    },
+    {
+      "id": 61,
+      "name": "Jardim Dom Fernando",
+      "lat": 41.691791,
+      "long": -8.835638,
+      "text": " Encontramo-nos a passar pelo Jardim Dom Fernando.",
+      "detail": "Informação detalhada - Jardim D Fernando"
+    },
+    {
+      "id": 62,
+      "name": "Rotunda dos Pescadores",
+      "lat": 41.691987,
+      "long": -8.837091,
+      "text": " Estamos a contornar a rotunda dos pescadores.",
+      "detail": "Informação detalhada - Pescadores"
+    },
+    {
+      "id": 63,
+      "name": "Igreja São Domingos",
+      "lat": 41.691591,
+      "long": -8.834044,
+      "text": "À direita encontra-se a Igreja de São Domingos.",
+      "detail": "Informação detalhada - S Domingos"
+    },
+    {
+      "id": 64,
+      "name": "Centro de Saúde Gil Eanes",
+      "lat": 41.690277,
+      "long": -8.833454,
+      "text": "À direita encontra-se o centro de Saúde Gil Eanes ",
+      "detail": "Informação detalhada Centro de Saúde Gil Eanes"
+    },
+    {
+      "id": 65,
+      "name": "Largo Santa Catarina",
+      "lat": 41.689321,
+      "long": -8.83435,
+      "text": "Vamos fazer inversão de marcha em direção ao barco Gil Eanes.",
+      "detail": "Informação detalhada - Largo S Catarina"
+    },
+    {
+      "id": 66,
+      "name": "Gil Eanes",
+      "lat": 41.689999,
+      "long": -8.832001,
+      "text": "À direita encontra-se o barco Gil Eanes.",
+      "detail": "Informação detalhada - Gil Eanes"
+    },
+    {
+      "id": 67,
+      "name": "Passadeira - Gil Eanes",
+      "lat": 41.690711,
+      "long": -8.830236,
+      "text": " Encontramo-nos perto da passadeira de acesso ao Gil Eanes.",
+      "detail": "Informação detalhada - Passadeira Gil"
+    },
+    {
+      "id": 68,
+      "name": "Praça da Liberdade",
+      "lat": 41.690819,
+      "long": -8.828205,
+      "text": "Estamos em frente à Praça da Liberdade.",
+      "detail": "Informação detalhada - Praça Liberdade"
+    },
+    {
+      "id": 69,
+      "name": "Caixa Geral de Depósitos",
+      "lat": 41.692509,
+      "long": -8.829179,
+      "text": "À esquerda temos a Caixa Geral de Depósitos.",
+      "detail": "Informação detalhada - C G D"
+    },
+    {
+      "id": 70,
+      "name": "Zé Natário",
+      "lat": 41.691469,
+      "long": -8.828348,
+      "text": "À esquerda o café Zé Natário.",
+      "detail": "Informaçãodetalhada - Natário"
+    },
+    {
+      "id": 71,
+      "name": "Tribunal",
+      "lat": 41.694257,
+      "long": -8.830633,
+      "text": " Vamos passar em frente do Tribunal e dos correios.",
+      "detail": "Informação detalhada - Tribunal - C T T"
+    },
+    {
+      "id": 72,
+      "name": "Acessos ao Elevador - Estação",
+      "lat": 41.694946,
+      "long": -8.830101,
+      "text": "Aproximamo-nos perto da passadeira de acesso ao elevador da estação de comboios.",
+      "detail": "Informação detalhada - Acessos elevador"
+    },
+    {
+      "id": 73,
+      "name": "Bombeiros",
+      "lat": 41.695498,
+      "long": -8.829323,
+      "text": "À direita situa-se os Bombeiros.",
+      "detail": "Informação detalhada - Bombeiros"
+    },
+    {
+      "id": 74,
+      "name": "Laboratório",
+      "lat": 41.696394,
+      "long": -8.827362,
+      "text": "Situamo-nos perto do cruzamento que dá acesso à Farmácia, Laboratório de análises e Centro de Saúde.",
+      "detail": "  Informação detalhada - Farmacia cruzamento"
+    },
+    {
+      "id": 75,
+      "name": "Pingo Doce",
+      "lat": 41.696225,
+      "long": -8.826179,
+      "text": "À esquerda encontra-se o Pingo Doce.",
+      "detail": "Informação detalhada - Pingo Doce"
+    },
+    {
+      "id": 76,
+      "name": " P S P",
+      "lat": 41.696788,
+      "long": -8.825109,
+      "text": "Estamos a passar pelo posto da P S P ",
+      "detail": "Informação detalhada - P S P"
+    }
+  ]

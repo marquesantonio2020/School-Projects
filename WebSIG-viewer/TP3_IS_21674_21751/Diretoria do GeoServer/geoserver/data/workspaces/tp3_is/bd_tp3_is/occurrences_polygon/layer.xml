@@ -1,0 +1,16 @@
+<layer>
+  <name>occurrences_polygon</name>
+  <id>LayerInfoImpl--5f985d28:177304fda2b:-7ffe</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--5c1f50e5:17726310d27:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--5f985d28:177304fda2b:-7fff</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-23 18:39:54.169 UTC</dateCreated>
+</layer>

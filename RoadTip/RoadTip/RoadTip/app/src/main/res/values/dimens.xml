@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Dimensões das margens a utilizar-->
+    <dimen name="big_margin">24dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="small_margin">5dp</dimen>
+    <dimen name="itens_margin">28dp</dimen>
+
+    <!--Dimensões dos textos-->
+    <dimen name="titulo_tamanho">20dp</dimen>
+    <dimen name="texto_regular">14dp</dimen>
+    <dimen name="titulo_tamanho_list">16dp</dimen>
+
+    <!--Dimensões margens e paddings das listas-->
+    <dimen name="item_list_margin">10dp</dimen>
+    <dimen name="list_text_title">8dp</dimen>
+    <dimen name="small_list_item_margin">4dp</dimen>
+    <dimen name="small_padding">2dp</dimen>
+    <dimen name="margin_twelve">12dp</dimen>
+
+</resources>

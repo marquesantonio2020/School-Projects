@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/teste"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".transportes.Transportes">
+
+    <ImageButton
+        android:id="@+id/backarrow"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/small_list_item_margin"
+        android:layout_marginTop="@dimen/small_list_item_margin"
+        android:layout_marginBottom="@dimen/list_text_title"
+        android:background="@color/fui_transparent"
+        android:contentDescription="@string/hoteis"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/titulo_transportes"
+        app:layout_constraintStart_toStartOf="@+id/titulo_transporte"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo_transportes"
+        style="@style/EstiloLetraTitulos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bottom_strokes"
+        android:paddingTop="@dimen/small_list_item_margin"
+        android:paddingBottom="@dimen/small_list_item_margin"
+        android:text="@string/transportesTitulo"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo_transporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipotransporte"
+        android:layout_marginTop="@dimen/small_list_item_margin"
+        android:layout_marginStart="@dimen/list_text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_transportes" />
+
+    <Spinner
+        android:id="@+id/droplistTransportes"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/small_list_item_margin"
+        android:layout_marginStart="@dimen/list_text_title"
+        android:layout_marginEnd="@dimen/list_text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_transporte" />
+
+    <TextView
+        android:id="@+id/titulo_pais_transporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/país_subtitulo"
+        android:layout_marginTop="@dimen/small_list_item_margin"
+        android:layout_marginStart="@dimen/list_text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/droplistTransportes" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/paisTransportesText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/list_text_title"
+        android:layout_marginEnd="@dimen/list_text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_pais_transporte">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/paisTransportesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/input_país" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/titulo_cidade_transporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cidade_subtitulo"
+        android:layout_marginTop="@dimen/small_list_item_margin"
+        android:layout_marginStart="@dimen/list_text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paisTransportesText1" />
+
+    <Spinner
+        android:id="@+id/droplistCidadeTransportes"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/small_list_item_margin"
+        android:layout_marginStart="@dimen/list_text_title"
+        android:layout_marginEnd="@dimen/list_text_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_cidade_transporte" />
+
+    <Button
+        android:id="@+id/pesquisa_botao"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@drawable/button_round_borders"
+        android:text="@string/pesquisa"
+        android:textColor="@color/branco"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/droplistCidadeTransportes" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_transportes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/default_margin"
+            android:background="@drawable/square_borders" />
+    </LinearLayout>
+    </FrameLayout>
+
+</layout>
+
+

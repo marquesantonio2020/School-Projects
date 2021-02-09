@@ -1,0 +1,16 @@
+<layer>
+  <name>ardida_2018</name>
+  <id>LayerInfoImpl--4b94eaef:1771a269b9b:-7fc3</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4b94eaef:1771a269b9b:-7fc7</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fc4</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-19 19:05:57.702 UTC</dateCreated>
+</layer>

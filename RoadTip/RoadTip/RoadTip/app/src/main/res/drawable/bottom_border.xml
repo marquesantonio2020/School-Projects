@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Drawable para modificar a forma do buttonview-->
+    <item>
+        <shape android:padding="10dp" android:shape="rectangle">
+            <!--Cor do botão-->
+            <solid android:color="@color/azulEsmeralda" />
+            <!--Arredondamento dos cantos inferiores-->
+            <corners android:bottomLeftRadius="10dp" android:bottomRightRadius="10dp" />
+        </shape>
+    </item>
+</selector>

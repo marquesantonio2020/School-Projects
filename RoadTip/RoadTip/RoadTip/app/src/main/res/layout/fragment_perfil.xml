@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="perfil.Perfil">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tituloPerfil"
+                    style="@style/EstiloLetraTitulos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_bottom_strokes"
+                    android:text="@string/perfil"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/perfil_pic" />
+
+                <TextView
+                    android:id="@+id/nomeLayoutConta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="nomeLayoutConta"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/emailLayoutConta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="emailLayoutConta"
+                    android:textAlignment="center"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/editar_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:background="@drawable/button_round_borders"
+                    android:text="@string/edit"
+                    android:textColor="@color/branco"
+                    android:foreground="?android:attr/selectableItemBackground"/>
+
+                <Button
+                    android:id="@+id/meuRot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:background="@drawable/rot_round_borders"
+                    android:text="@string/meuRotButton"
+                    android:textColor="@color/azulEsmeralda"
+                    android:textStyle="bold"
+                    android:drawableTop="@drawable/ic_location_on_azul_24dp"/>
+
+                <ListView
+                    android:id="@+id/roteiroList"
+                    android:layout_width="match_parent"
+                    android:layout_height="249dp"
+                    android:layout_gravity="center"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <Button
+                    android:id="@+id/termSessao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:background="@drawable/button_round_borders"
+                    android:text="@string/termSessao"
+                    android:textColor="@color/branco"
+                    android:foreground="?android:attr/selectableItemBackground"/>
+
+            </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>
+</layout>

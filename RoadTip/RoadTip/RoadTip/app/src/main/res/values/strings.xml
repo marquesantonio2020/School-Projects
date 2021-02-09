@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">RoadTip</string>
+
+    <!--Descrições das imagens-->
+    <string name="logo_horizontal">Logo horizontal</string>
+    <string name="botão_adicionar">Botão de Adicionar</string>
+    <string name="minimapa">minimapa</string>
+
+
+    <!--Itens do menú do ecrã principal-->
+    <string name="restaurantes">Restaurantes</string>
+    <string name="museus">Museus</string>
+    <string name="transportes">Transportes</string>
+    <string name="hoteis">Hotéis</string>
+    <string name="cultura">Cultura</string>
+    <string name="atividades">Atividades</string>
+
+    <!--Títulos-->
+    <string name="roteiros">Roteiros</string>
+    <string name="criarroteiro">Criar Roteiro (1/2)</string>
+    <string name="criarroteiro2">Criar Roteiro (2/2)</string>
+    <string name="transportesTitulo">Transportes</string>
+    <string name="empresa">Empresa</string>
+    <string name="horario">Horário</string>
+
+    <!--Subtítulos-->
+    <string name="mais_procurados">Mais Procurados</string>
+    <string name="porto_subtitulo_mais_procurado">Pelas Ruas do Porto</string>
+    <string name="lisboa_subtitulo_mais_procurado">Lisboa Menina e Moça</string>
+    <string name="nome_roteiro">Nome do roteiro:</string>
+    <string name="localidade_subtitulo">Localidade:</string>
+    <string name="país_subtitulo">País:</string>
+    <string name="descrição_subtitulo">Descrição</string>
+    <string name="descrição_opcional">Descrição(Opcional)</string>
+    <string name="hashtag_opcional">Hashtags(Opcional)</string>
+    <string name="tipotransporte">Tipo Transporte</string>
+    <string name="cidade_subtitulo">Cidade:</string>
+    <string name="origem">Origem</string>
+    <string name="destino">Destino</string>
+    <string name="partida">Partida</string>
+    <string name="chegada">Chegada</string>
+    <string name="adicoes">Adições ao roteiro</string>
+
+    <!--Descrições-->
+    <string name="porto_mais_procurado_descrição">Criado com o intuito de passaer por um dia na cidade do Porto, seguindo conselhos...</string>
+    <string name="lisboa_mais_procurado_descrição">Na capital portuguesa através deste roteiro conhecer as gentes e as tradições.. </string>
+    <string name="de">de:</string>
+    <string name="para">para:</string>
+    <string name="explicacao">Selecione a categoria para verificar os itens selecionados e remover se assim pertender.</string>
+
+    <!--Texto Botões-->
+    <string name="botãoSeguinte">Seguinte</string>
+    <string name="botãoCriar"> Criar Roteiro</string>
+    <string name="botãoAdicionar"> Adicionar ao Roteiro</string>
+    <string name="pesquisa">Pesquisar</string>
+    <string name="ver">Ver Horários</string>
+
+    <!--Texto barras de pesquisa/barras de input-->
+    <string name="aventura">Vamos numa aventura?</string>
+    <string name="input_roteiro">Nome do roteiro</string>
+    <string name="input_país">País de destino</string>
+    <string name="input_restaurantes">Nome do restaurante</string>
+    <string name="input_pais">Nome do pais a obter transportes</string>
+
+    <!--Arrays de strings para droplists-->
+    <string-array name="localidades_droplist1">
+        <item>Faro</item>
+        <item>Lisboa</item>
+        <item>Porto</item>
+        <item>Viana do Castelo</item>
+    </string-array>
+
+    <string-array name="transportes_droplist">
+        <item>Comboio</item>
+        <item>Autocarro</item>
+        <item>Avião</item>
+        <item>Metro</item>
+    </string-array>
+
+    <string-array name="de_para_droplists">
+        <item>S.Bento</item>
+        <item>Campanhã</item>
+        <item>Braga</item>
+        <item>Lisboa</item>
+        <item>Coimbra</item>
+    </string-array>
+
+    <string-array name="SBento_Campanha">
+        <item>CP Urbano</item>
+        <item>CP Rural</item>
+    </string-array>
+
+    <string-array name="Campanha_Lisboa">
+        <item>CP Expresso</item>
+    </string-array>
+
+    <string-array name="Campanha_Braga">
+        <item>CP Expresso</item>
+        <item>CP Urbano</item>
+        <item>CP Rural</item>
+    </string-array>
+
+    <string-array name="localidades_droplist2">
+        <item>Liverpool</item>
+        <item>Londres</item>
+        <item>Manchester</item>
+    </string-array>
+
+    <string-array name="SBentoCampanhaOrigemDestino">
+        <item>9h00-12h00</item>
+        <item>10h30-15h00</item>
+        <item>12h00-17h00</item>
+        <item>13h00-18h00</item>
+        <item>15h00-20h00</item>
+        <item>22h00-00h00</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="perfil">Perfil</string>
+    <string name="edit">Editar Perfil</string>
+    <string name="termSessao">Terminar Sessão</string>
+    <string name="meuRotButton">Meus Roteiros</string>
+
+</resources>

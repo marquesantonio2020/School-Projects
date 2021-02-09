@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fdd</id>
+  <name>concelhos_2015</name>
+  <nativeName>concelhos_2015</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--4b94eaef:1771a269b9b:-7ffe</id>
+  </namespace>
+  <title>concelhos_2015</title>
+  <keywords>
+    <string>features</string>
+    <string>concelhos_2015</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-119191.4140625</minx>
+    <maxx>162129.09375</maxx>
+    <miny>-300404.8125</miny>
+    <maxy>276083.78125</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-9.575004951732977</minx>
+    <maxx>-6.17203645701769</maxx>
+    <miny>36.94801880567078</miny>
+    <maxy>42.15403599420523</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--4b94eaef:1771a269b9b:-7ffd</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

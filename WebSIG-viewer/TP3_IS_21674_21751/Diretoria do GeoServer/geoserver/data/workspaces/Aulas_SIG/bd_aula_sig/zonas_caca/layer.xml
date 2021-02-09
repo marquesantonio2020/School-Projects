@@ -1,0 +1,16 @@
+<layer>
+  <name>zonas_caca</name>
+  <id>LayerInfoImpl-52320065:176f64f7a43:-7fe2</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52320065:176f64f7a43:-7fe3</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-12 12:52:53.984 UTC</dateCreated>
+</layer>

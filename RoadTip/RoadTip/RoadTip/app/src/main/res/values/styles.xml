@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Estilo de letra do texto regular-->
+    <style name="EstiloLetraRegular">
+        <item name="android:text">@font/roboto</item>
+        <item name="android:textColor">@color/texto_preto</item>1
+        <item name="android:textSize">@dimen/texto_regular</item>
+    </style>
+
+    <!--Estilo de letra do subtítulo-->
+    <style name="EstiloLetraSubtitulosBranco">
+        <item name="android:text">@font/roboto_bold</item>
+        <item name="android:textColor">@color/texto_branco</item>
+        <item name="android:textSize">@dimen/texto_regular</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+
+    <style name="EstiloLetraSubtitulosPreto">
+        <item name="android:text">@font/roboto_bold</item>
+        <item name="android:textColor">@color/texto_preto</item>
+        <item name="android:textSize">@dimen/texto_regular</item>
+    </style>
+
+    <!--Estilo de letra do título-->
+    <style name="EstiloLetraTitulos">
+        <item name="android:text">@font/roboto_bold</item>
+        <item name="android:textColor">@color/texto_preto</item>1
+        <item name="android:textSize">@dimen/titulo_tamanho</item>
+    </style>
+
+    <!--Estilo de letra do título ListView_Restaurante-->
+    <style name="EstiloLetraTitulosRestaurante">
+        <item name="android:text">@font/roboto_bold</item>
+        <item name="android:textColor">@color/texto_preto</item>1
+        <item name="android:textSize">@dimen/titulo_tamanho_list</item>
+    </style>
+
+</resources>

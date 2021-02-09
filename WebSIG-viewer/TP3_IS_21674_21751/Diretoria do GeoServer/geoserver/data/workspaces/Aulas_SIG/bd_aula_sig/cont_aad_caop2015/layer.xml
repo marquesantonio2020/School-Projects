@@ -1,0 +1,16 @@
+<layer>
+  <name>cont_aad_caop2015</name>
+  <id>LayerInfoImpl-52320065:176f64f7a43:-7ff5</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--570ae188:124761b8d78:-7fe0</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl-52320065:176f64f7a43:-7ff6</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-12 12:44:20.744 UTC</dateCreated>
+</layer>

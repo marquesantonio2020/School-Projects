@@ -1,0 +1,16 @@
+<layer>
+  <name>occurrences_line</name>
+  <id>LayerInfoImpl--1c548f4d:1772953e0a5:-7f80</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--5c1f50e5:17726310d27:-7ffd</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--1c548f4d:1772953e0a5:-7f81</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-22 22:57:36.47 UTC</dateCreated>
+</layer>

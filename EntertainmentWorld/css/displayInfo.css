@@ -1,0 +1,194 @@
+body{
+    background-color: white;
+    margin: 0px;
+}
+
+.row {
+    margin: 20px 20px 20px 10px;
+}
+
+#info{
+    display: inline-flex;
+    width: 75%;
+    background-color: coral;
+    padding: 10px 0px 10px 10px;
+}
+
+div.col-md-4{
+    width: 48.3333%;
+    padding: 10px;
+}
+
+div > .actorCard{
+    float: left;
+    background-color: #ff7f5052;
+    width: 23%;
+    height: 410px;
+    margin: 5px;
+    padding-bottom: 1em;
+    border-radius: 20px;
+    border: 2px solid coral;
+}
+
+.card > img {
+    margin-top: 10px;
+    width: 235px;
+    height: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-header{
+    text-align: center;
+    font-size: larger;
+    margin-top: 10px;
+}
+
+.card-body{
+    height: 70px;
+}
+
+.card-body > h5{
+    margin: 10px 0px 0px 0px;
+}
+
+div#footer > p {
+    margin: 0px !important;
+}
+div#content {
+    height: 55%;
+}
+
+.container-fluid{
+    margin: 0px 200px 0px 200px
+}
+
+div>.col-md-4{
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 20px;
+}
+
+.items{
+    padding: 10px 30px 10px 20px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 20px;
+    
+}
+
+.list-group{
+    display: grid;
+}
+
+
+
+.list-group-item{
+    padding: 10px 0px 10px 0px;
+}
+
+#poster{
+    width: auto;
+    margin-right: 15px;
+    padding: 0px 10px;
+    height: 402px;
+}
+
+#actorList, #filmography{
+    display: block;
+}
+
+#bioArea > p {
+    height: 300px;
+    overflow: hidden;
+}
+
+#bioArea.showContent p{
+    height: auto
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 10% 0 auto;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.5);
+    ;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+  
+  #navHeader{
+    margin-left: 15%;
+    color: white;
+  }
+  
+  #navigation{
+    background-color: red;
+    display: flex;
+    width: 100%;
+  }
+
+.findmore, .readmore-btn{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 18px;
+    display: block;
+    width: max-content;
+    background-color: coral;
+    border-color: coral;
+    border-radius: 10px !important;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .readmore-btn{
+      margin-bottom: 10px;
+  }
+
+  .readmore-btn:hover{
+    background-color: rgba(138, 138, 138, 0.5) !important;
+  }
+  .findmore:hover{
+    background-color: rgba(138, 138, 138, 0.5) !important;
+  }
+
+  #plot{
+    margin: 20px 20px 20px 10px;
+    background: white;
+    border: 4px solid coral;
+    border-radius: 20px;
+    padding: 0px 20px 0px 21px;
+}
+
+#poster>img {
+    width: 284px;
+    height: 375px;
+    margin: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h5 > a:hover{
+    text-decoration: underline !important;
+}

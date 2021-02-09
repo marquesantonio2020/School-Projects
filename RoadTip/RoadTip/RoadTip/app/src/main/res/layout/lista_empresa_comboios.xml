@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/empresas"
+            android:layout_width="203dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/small_list_item_margin"
+            android:layout_marginStart="@dimen/small_list_item_margin"
+            android:layout_marginEnd="@dimen/small_list_item_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Empresa1" />
+
+        <Button
+            android:id="@+id/botao_ver_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/ver"
+            android:textColor="@color/branco"
+            android:paddingStart="@dimen/small_list_item_margin"
+            android:paddingEnd="@dimen/small_list_item_margin"
+            android:layout_margin="@dimen/small_list_item_margin"
+            android:background="@drawable/button_round_borders"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/empresas"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

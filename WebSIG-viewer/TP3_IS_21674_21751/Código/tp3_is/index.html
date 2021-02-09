@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebSIG Viewer for Geographic Data</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- Overview_MiniMap-->
+    <link rel="stylesheet" href="libs/overview/MiniMap.css" />
+    <!-- Localization-->
+    <link rel="stylesheet" href="libs/L.Control.Locate.min.css" />
+    <!-- Mouse position-->
+    <link rel="stylesheet" href="libs/L.Control.MousePosition.css" />
+    <!-- Navigation Bar-->
+    <link rel="stylesheet" href="libs/NavBar/NavBar.css" />
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css" />
+    <!-- Modal Bootstrap-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Leaflet Map div-->
+    <div id="map" style="position:fixed;"></div>
+
+    <!--Modal form to create point-->
+    <div id="id01" class="w3-modal ">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+            <header class="w3-container">
+                <span onclick="closeModal()" class="w3-button w3-display-topright">&times;</span>
+                <h2>Add new marker</h2>
+                <!--selected layer-->
+                <span id="layerValue" name="layerValue" style="display: none;"></span>
+            </header>
+
+            <form name="add" class="w3-container" method="post" action="./points/addPoint.php" enctype="multipart/form-data">
+                <!--lat of marker-->
+                <input id="lat" name="lat" type="hidden"></input>
+                <!--lng of marker-->
+                <input id="lng" name="lng" type="hidden"></input>
+                <!--Name input-->
+                <label><b>Name</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter name" name="namemarker" required>
+                <label><b>Type</b></label>
+                <!--Select input to type of marker-->
+                <select class="w3-input w3-border w3-margin-bottom" name="typemarker" id="typemarker" required>
+                    <option value="1">Sport</option>
+                    <option value="2">Nature</option>
+                    <option value="3">Culture</option>
+                    <option value="4">Beauty</option>
+                    <option value="5">Food</option>
+                    <option value="6">Education</option>
+                    <option value="7">Health</option>
+                  </select>
+                <!--Image input-->
+                <label><b>Image</b></label>
+                <input class="w3-input w3-border" type="file" id="imgmarker" name="imgmarker" accept="image/*" required>
+                <button name="submitDatabase" onclick="document.getElementById('add').reset();" type="submit" class="w3-button w3-block  w3-section w3-padding">Add to database</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!--Modal form to create polyline-->
+    <div id="id02" class="w3-modal ">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+            <header class="w3-container">
+                <span onclick="closeModal2()" class="w3-button w3-display-topright">&times;</span>
+                <h2>Add new route</h2>
+                <!--selected layer-->
+                <span id="layerValue2" name="layerValue" style="display: none;"></span>
+            </header>
+
+            <form name="addPolyline" class="w3-container" method="post" action="./lines/addPolyline.php" enctype="multipart/form-data">
+                <!--coordinates of polyline-->
+                <input id="coordinates" name="coordinates" type="hidden"></input>
+                <!--Name input-->
+                <label><b>Name</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter name" name="namepolyline" required>
+                <label><b>Type</b></label>
+                <!--Select input to type of polyline-->
+                <select class="w3-input w3-border w3-margin-bottom" name="typepolyline" id="typepolyline" required>
+                    <option value="1">Sport</option>
+                    <option value="2">Nature</option>
+                    <option value="3">Culture</option>
+                    <option value="4">Beauty</option>
+                    <option value="5">Food</option>
+                    <option value="6">Education</option>
+                    <option value="7">Health</option>
+                </select>
+                <!--Image input-->
+                <label><b>Image</b></label>
+                <input class="w3-input w3-border" type="file" id="imgpolyline" name="imgpolyline" accept="image/*" required>
+                <button name="submitDatabase" onclick="document.getElementById('addPolyline').reset();" type="submit" class="w3-button w3-block  w3-section w3-padding">Add to database</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Modal form to create polygon-->
+    <div id="id03" class="w3-modal ">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+            <header class="w3-container">
+                <span onclick="closeModal3()" class="w3-button w3-display-topright">&times;</span>
+                <h2>Add new area</h2>
+                <!--selected layer-->
+                <span id="layerValue3" name="layerValue3" style="display: none;"></span>
+            </header>
+
+            <form name="addPolygon" class="w3-container" method="post" action="./polygons/addPolygon.php" enctype="multipart/form-data">
+                <!--coordinates of polygon-->
+                <input id="coordinatespolygon" name="coordinatespolygon" type="hidden"></input>
+                <!--Name input-->
+                <label><b>Name</b></label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter name" name="namepolygon" required>
+                <label><b>Type</b></label>
+                <!--Select input to type of polygon-->
+                <select class="w3-input w3-border w3-margin-bottom" name="typepolygon" id="typepolygon" required>
+                    <option value="1">Sport</option>
+                    <option value="2">Nature</option>
+                    <option value="3">Culture</option>
+                    <option value="4">Beauty</option>
+                    <option value="5">Food</option>
+                    <option value="6">Education</option>
+                    <option value="7">Health</option>
+                  </select>
+                <!--Image input-->
+                <label><b>Image</b></label>
+                <input class="w3-input w3-border" type="file" id="imgpolygon" name="imgpolygon" accept="image/*" required>
+                <button name="submitDatabase" onclick="document.getElementById('addPolygon').reset();" type="submit" class="w3-button w3-block  w3-section w3-padding">Add to database</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    <script src="libs/slide_menu/SlideMenu.js"></script>
+    <script src="libs/overview/MiniMap.js"></script>
+    <script src="libs/NavBar/NavBar.js"></script>
+    <script src="libs/L.Control.MousePosition.js"></script>
+    <script src="libs/L.Control.Locate.js"></script>
+
+    <script src="libs/Leaflet-draw.js"></script>
+    <script src="libs/leaflet-ajax.js"></script>
+    <script src="libs/leaflet-vectorgrid.js"></script>
+
+
+    <script>
+        //modal functions
+        function openCreateModal() {
+            //show modal
+            document.getElementById('id01').style.display = 'block';
+        };
+
+        function closeModal() {
+            //close modal and remove layer
+            map.removeLayer(document.getElementById("layerValue").value);
+            document.getElementById('id01').style.display = 'none'
+        };
+
+        function openCreateModal2() {
+            document.getElementById('id02').style.display = 'block';
+        };
+
+        function closeModal2() {
+            map.removeLayer(document.getElementById("layerValue2").value);
+            document.getElementById('id02').style.display = 'none'
+        };
+
+        function openCreateModal3() {
+            document.getElementById('id03').style.display = 'block';
+        };
+
+        function closeModal3() {
+            map.removeLayer(document.getElementById("layerValue3").value);
+            document.getElementById('id03').style.display = 'none'
+        };
+
+
+        //baseLayers
+        var token = 'pk.eyJ1IjoibmNhbXBpbmhvIiwiYSI6ImNrazQ0YmZ4ZTAyd2Iyd3BrZ3gwbWEyMGsifQ.i3Jn9kPVCnqYJk3XVJpOfg'
+
+        var grayscale = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> Contributors',
+            maxZoom: 18,
+        })
+
+        var satellite = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> Contributors',
+            maxZoom: 18,
+            id: 'mapbox.satellite',
+            accessToken: token,
+        })
+
+        var dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> Contributors',
+            maxZoom: 18,
+            id: 'mapbox/dark-v9',
+        })
+
+        var light = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> Contributors',
+            maxZoom: 18,
+            id: 'mapbox/light-v9',
+        })
+
+        var WorldImagery = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}');
+
+        //LeafletMap
+        var map = L.map('map', {
+            center: [41.69367955186058, -8.846375493436843],
+            zoom: 12,
+            layers: [grayscale],
+
+        });
+
+        var baseMaps = {
+            "Grayscale": grayscale,
+            "Satellite": satellite,
+            "WorldImagery": WorldImagery,
+            "Dark": dark,
+            "Light": light,
+        }
+
+        //overlayMaps
+        //layers
+        //concelhos_2015 layer
+        var concelhos = L.tileLayer.wms('http://localhost:8080/geoserver/tp3_is/wms', { //url to geoserver
+            layers: 'tp3_is:concelhos_2015',
+            format: 'image/png',
+            opacity: 0.6,
+            transparent: true
+        })
+
+        //rede_ferroviaria layer
+        var redeFerroviaria = L.tileLayer.wms('http://localhost:8080/geoserver/tp3_is/wms', {
+            layers: 'tp3_is:rede_ferroviaria',
+            format: 'image/png',
+            opacity: 0.9,
+            transparent: true
+        })
+
+        //rede_viaria layer
+        var redeViaria = L.tileLayer.wms('http://localhost:8080/geoserver/tp3_is/wms', {
+            layers: 'tp3_is:rede_viaria',
+            format: 'image/png',
+            opacity: 0.9,
+            transparent: true
+        })
+
+        //ecovia layer
+        var ecovia = L.tileLayer.wms('http://localhost:8080/geoserver/tp3_is/wms', {
+            layers: 'tp3_is:ecopistas',
+            format: 'image/png',
+            opacity: 0.9,
+            transparent: true
+        })
+
+        //area_ardida layer
+        var areaArdida = L.tileLayer.wms('http://localhost:8080/geoserver/tp3_is/wms', {
+            layers: 'tp3_is:ardida_2018',
+            format: 'image/png',
+            opacity: 0.9,
+            transparent: true
+        })
+
+        //fotopontos layer 
+        var fotoPontos = L.tileLayer.wms('http://localhost:8080/geoserver/tp3_is/wms', {
+            layers: 'tp3_is:ifn_2015',
+            format: 'image/png',
+            opacity: 0.5,
+            transparent: true
+        })
+
+        //icons used in marker
+        var redIcon = L.icon({
+            iconUrl: 'markers/marker_red.png',
+            iconSize: [40, 40],
+        });
+
+        var pinkIcon = L.icon({
+            iconUrl: 'markers/marker_pink.png',
+            iconSize: [40, 40],
+        });
+
+        var greenIcon = L.icon({
+            iconUrl: 'markers/marker_green.png',
+            iconSize: [40, 40],
+        });
+
+        var blueIcon = L.icon({
+            iconUrl: 'markers/marker_blue.png',
+            iconSize: [40, 40],
+        });
+
+        var yellowIcon = L.icon({
+            iconUrl: 'markers/marker_yellow.png',
+            iconSize: [40, 40],
+        });
+
+        var blackIcon = L.icon({
+            iconUrl: 'markers/marker_black.png',
+            iconSize: [40, 40],
+        });
+
+        var orangeIcon = L.icon({
+            iconUrl: 'markers/marker_orange.png',
+            iconSize: [40, 40],
+        });
+
+        var whiteIcon = L.icon({
+            iconUrl: 'markers/marker_white.png',
+            iconSize: [40, 40],
+        });
+
+        //geoserver request get points
+        var owsrootUrl = 'http://localhost:8080/geoserver/tp3_is/wms';
+        var defaultParameters = {
+            service: 'WFS',
+            version: '2.0',
+            request: 'GetFeature',
+            typeName: 'tp3_is:occurrences_point',
+            outputFormat: 'json',
+            format_options: 'callback: getJson',
+            SrsName: 'EPSG:3763',
+            headers: {
+                "accept": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        }
+        var parameters = L.Util.extend(defaultParameters);
+        var URL = owsrootUrl + L.Util.getParamString(parameters)
+        var ajax = $.ajax({
+            url: URL,
+            dataType: 'json',
+            jsonpCallback: 'getJson',
+            success: function(response) {
+                var typeName = ""; //Name of type
+                L.geoJson(response, {
+                    pointToLayer: function(feature, latlng) {
+                        var type = feature.properties.type;
+                        switch (type) { //different style by type
+                            case 1:
+                                {
+                                    typeName = "Sport";
+                                    return L.marker(latlng, {
+                                        icon: redIcon
+                                    });
+                                }
+                            case 2:
+                                {
+                                    typeName = "Nature";
+                                    return L.marker(latlng, {
+                                        icon: greenIcon
+                                    });
+                                }
+                            case 3:
+                                {
+                                    typeName = "Culture";
+                                    return L.marker(latlng, {
+                                        icon: yellowIcon
+                                    });
+                                }
+                            case 4:
+                                {
+                                    typeName = "Beauty";
+                                    return L.marker(latlng, {
+                                        icon: pinkIcon
+                                    });
+                                }
+                            case 5:
+                                {
+                                    typeName = "Food";
+                                    return L.marker(latlng, {
+                                        icon: blueIcon
+                                    });
+                                }
+                            case 6:
+                                {
+                                    typeName = "Education";
+                                    return L.marker(latlng, {
+                                        icon: orangeIcon
+                                    });
+                                }
+                            case 7:
+                                {
+                                    typeName = "Health";
+                                    return L.marker(latlng, {
+                                        icon: whiteIcon
+                                    });
+                                }
+                        }
+
+                    },
+                    onEachFeature: function(feature, layer) {
+                        popupOptions = {
+                            maxWidth: 600
+                        };
+                        layer.bindPopup(
+                            //onclick popup
+                            "<h2>" + feature.properties.name + "</h2>\
+                            <hr style='margin-top: 0; padding-top: 0;'>\
+                            <form action='./points/removePoint.php'>\
+                            <input id='id' name='id' value=" + (feature.id).split('.')[1] + " type='hidden'></input>\
+                            <b>Name: </b>" + feature.properties.name +
+                            "<br><b>Type: </b>" + typeName +
+                            "<br><b>Latitude </b>" + feature.geometry.coordinates[0] +
+                            " | <b>Longitude </b>" + feature.geometry.coordinates[1] +
+                            "<br><b>Date: </b>" + (feature.properties.date).split('T')[0] +
+                            " | <b>Hour: </b>" + (feature.properties.date).split('T')[1].split('.')[0] +
+                            "<br><b>Image: </b>\
+                            <br><img height='200px' width='300px' src='upload/" + feature.properties.image + "'>\
+                            <br><button id='marker' style='height: 40px; width:100px; border: none;\
+                            color:black; background-color: rgb(256, 256, 256, 0.8);\
+                            border-radius: 8px;' type='submit'><b>Remove Marker</b></button>\
+                            </form>", popupOptions);
+                    }
+                }).addTo(map);
+            }
+        });
+
+        //geoserver request get points
+        var owsrootUrl = 'http://localhost:8080/geoserver/tp3_is/wms';
+        var defaultParameters = {
+            service: 'WFS',
+            version: '2.0',
+            request: 'GetFeature',
+            typeName: 'tp3_is:occurrences_line',
+            outputFormat: 'json',
+            format_options: 'callback: getJson',
+            SrsName: 'EPSG:3763',
+            headers: {
+                "accept": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        }
+        var parameters = L.Util.extend(defaultParameters);
+        var URL = owsrootUrl + L.Util.getParamString(parameters)
+        var ajax = $.ajax({
+            url: URL,
+            dataType: 'json',
+            jsonpCallback: 'getJson',
+            success: function(response) {
+                var typeName = "";
+                L.geoJson(response, {
+                    style: function(feature) {
+                        var type = feature.properties.type;
+                        switch (type) {
+                            case 1:
+                                {
+                                    typeName = "Sport";
+                                    return {
+                                        "color": "red",
+                                        "fillOpacity": 0.65,
+                                        "weight": 2,
+                                    }
+                                }
+                            case 2:
+                                {
+                                    typeName = "Nature";
+                                    return {
+                                        "color": "green",
+                                        "fillOpacity": 0.65,
+                                        "weight": 2,
+                                    }
+                                }
+                            case 3:
+                                {
+                                    typeName = "Culture";
+                                    return {
+                                        "color": "yellow",
+                                        "fillOpacity": 0.65,
+                                        "weight": 2,
+                                    }
+                                }
+                            case 4:
+                                {
+                                    typeName = "Beauty";
+                                    return {
+                                        "color": "pink",
+                                        "fillOpacity": 0.65,
+                                        "weight": 2,
+                                    }
+                                }
+                            case 5:
+                                {
+                                    typeName = "Food";
+                                    return {
+                                        "color": "blue",
+                                        "fillOpacity": 0.65,
+                                        "weight": 2,
+                                    }
+                                }
+                            case 6:
+                                {
+                                    typeName = "Education";
+                                    return {
+                                        "color": "orange",
+                                        "fillOpacity": 0.65,
+                                        "weight": 2,
+                                    }
+                                }
+                            case 7:
+                                {
+                                    typeName = "Health";
+                                    return {
+                                        "color": "white",
+                                        "fillOpacity": 0.65,
+                                        "weight": 2,
+                                    }
+                                }
+                        }
+                    },
+
+                    onEachFeature: function(feature, layer) {
+                        //console.log(layer.getLatLngs())
+                        var seeDistance = 0.00000;
+                        var tempLatLng = null;
+
+                        $.each(layer._latlngs, function(i, latlng) {
+                            if (tempLatLng == null) {
+                                tempLatLng = latlng;
+                                return;
+                            }
+
+                            seeDistance += tempLatLng.distanceTo(latlng);
+                            tempLatLng = latlng;
+                        });
+
+                        popupOptions = {
+                            maxWidth: 600
+                        };
+                        layer.bindPopup(
+                            "<h2>" + feature.properties.name + "</h2>\
+                            <hr style='margin-top: 0; padding-top: 0;'>\
+                            <form action='./lines/removePolyline.php'>\
+                            <input id='id' name='id' value=" + (feature.id).split('.')[1] + " type='hidden'></input>\
+                            <b>Name: </b>" + feature.properties.name +
+                            "<br><b>Type: </b>" + typeName +
+                            "<br><b>Date: </b>" + (feature.properties.date).split('T')[0] +
+                            " | <b>Hour: </b>" + (feature.properties.date).split('T')[1].split('.')[0] +
+                            "<br><b>Distance: </b>" + seeDistance.toFixed(2) + " m" +
+                            "<br><b>Image: </b>\
+                            <br><img height='200px' width='300px' src='upload/" + feature.properties.image + "'>\
+                            <br><button id='marker' style='height: 40px; width:100px; border: none;\
+                            color:black; background-color: rgb(256, 256, 256, 0.8);\
+                            border-radius: 8px;' type='submit'><b>Remove Line</b></button>\
+                            </form>", popupOptions);
+                    }
+                }).addTo(map);
+            }
+        });
+
+        //geoserver request get polygons
+        var owsrootUrl = 'http://localhost:8080/geoserver/tp3_is/wms';
+        var defaultParameters = {
+            service: 'WFS',
+            version: '2.0',
+            request: 'GetFeature',
+            typeName: 'tp3_is:occurrences_polygon',
+            outputFormat: 'json',
+            format_options: 'callback: getJson',
+            SrsName: 'EPSG:3763',
+            headers: {
+                "accept": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        }
+        var parameters = L.Util.extend(defaultParameters);
+        var URL = owsrootUrl + L.Util.getParamString(parameters)
+        var ajax = $.ajax({
+            url: URL,
+            dataType: 'json',
+            jsonpCallback: 'getJson',
+            success: function(response) {
+                var typeName = "";
+                //console.log(response);
+
+                L.geoJson(response, {
+                    style: function(feature) {
+                        var type = feature.properties.type;
+                        switch (type) {
+                            case 1:
+                                {
+                                    typeName = "Sport";
+                                    return {
+                                        "color": "red",
+                                        "colorOpacity": 0.7,
+                                        "weight": 1,
+                                        "fillColor": "red",
+                                        "fillOpacity": 0.7
+                                    }
+                                }
+                            case 2:
+                                {
+                                    typeName = "Nature";
+                                    return {
+                                        "color": "green",
+                                        "colorOpacity": 0.7,
+                                        "weight": 1,
+                                        "fillColor": "green",
+                                        "fillOpacity": 0.7
+                                    }
+                                }
+                            case 3:
+                                {
+                                    typeName = "Culture";
+                                    return {
+                                        "color": "yellow",
+                                        "colorOpacity": 0.7,
+                                        "weight": 1,
+                                        "fillColor": "yellow",
+                                        "fillOpacity": 0.7
+                                    }
+                                }
+                            case 4:
+                                {
+                                    typeName = "Beauty";
+                                    return {
+                                        "color": "pink",
+                                        "colorOpacity": 0.7,
+                                        "weight": 1,
+                                        "fillColor": "pink",
+                                        "fillOpacity": 0.7
+                                    }
+                                }
+                            case 5:
+                                {
+                                    typeName = "Food";
+                                    return {
+                                        "color": "blue",
+                                        "colorOpacity": 0.7,
+                                        "weight": 1,
+                                        "fillColor": "blue",
+                                        "fillOpacity": 0.7
+                                    }
+                                }
+                            case 6:
+                                {
+                                    typeName = "Education";
+                                    return {
+                                        "color": "orange",
+                                        "colorOpacity": 0.7,
+                                        "weight": 1,
+                                        "fillColor": "orange",
+                                        "fillOpacity": 0.7
+                                    }
+                                }
+                            case 7:
+                                {
+                                    typeName = "Health";
+                                    return {
+                                        "color": "white",
+                                        "colorOpacity": 0.7,
+                                        "weight": 1,
+                                        "fillColor": "white",
+                                        "fillOpacity": 0.7
+                                    }
+                                }
+                        }
+                    },
+                    onEachFeature: function(feature, layer) {
+                        var seeArea = L.GeometryUtil.geodesicArea(layer.getLatLngs()[0]);
+                        //console.log(seeArea)
+                        popupOptions = {
+                            maxWidth: 600
+                        };
+                        layer.bindPopup(
+                            "<h2>" + feature.properties.name + "</h2>\
+                            <hr style='margin-top: 0; padding-top: 0;'>\
+                            <form action='./polygons/removePolygon.php'>\
+                            <input id='id' name='id' value=" + (feature.id).split('.')[1] + " type='hidden'></input>\
+                            <b>Name: </b>" + feature.properties.name +
+                            "<br><b>Type: </b>" + typeName +
+                            "<br><b>Date: </b>" + (feature.properties.date).split('T')[0] +
+                            " | <b>Hour: </b>" + (feature.properties.date).split('T')[1].split('.')[0] +
+                            "<br><b>Area: </b>" + seeArea + " m2" +
+                            "<br><b>Image: </b>\
+                            <br><img height='200px' width='300px' src='upload/" + feature.properties.image + "'>\
+                            <br><button id='marker' style='height: 40px; width:100px; border: none;\
+                            color:black; background-color: rgb(256, 256, 256, 0.8);\
+                            border-radius: 8px;' type='submit'><b>Remove Polygon</b></button>\
+                            </form>", popupOptions);
+                    }
+                }).addTo(map);
+            }
+        });
+
+        var overlayMaps = {
+            "Concelhos": concelhos,
+            "Rede Viária": redeViaria,
+            "Rede Ferroviária": redeFerroviaria,
+            "Ecovia": ecovia,
+            "Área ardida": areaArdida,
+            "Fotopontos": fotoPontos,
+        }
+
+
+
+
+
+
+
+
+        //RightButtons
+        var control = L.control.layers(baseMaps, overlayMaps).addTo(map)
+
+        //Minimap
+        var osm2 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+        var miniMap = new L.Control.MiniMap(osm2, {
+            toggleDisplay: true
+        }).addTo(map);
+
+        ///// Add the scale control to the map
+        L.control.scale().addTo(map);
+
+        ///// Add the Navigation Bar to the map 
+        L.control.navbar({
+            position: 'topleft'
+        }).addTo(map);
+
+        ///// Add the geolocate control to the map
+        L.control.locate().addTo(map);
+
+        ///// Add the mouse position to the map 
+        L.control.mousePosition().addTo(map);
+
+        ///// Add the draw feature to the map
+        var drawnItems = new L.FeatureGroup();
+        map.addLayer(drawnItems);
+
+
+        //controls to draw in leaflet map
+        var drawControl = new L.Control.Draw({
+            position: 'bottomleft',
+            draw: {
+                toolbar: {
+                    buttons: {
+                        polygon: {
+                            shapeOptions: {
+                                color: 'black',
+                            },
+                            allowIntersection: false,
+                            drawError: {
+                                color: 'orange',
+                                timeout: 1000
+                            },
+                            showArea: true,
+                            metric: true,
+                            repeatMode: true
+                        },
+                        polyline: {
+                            shapeOptions: {
+                                color: 'red'
+                            },
+                        },
+                        circle: {
+                            shapeOptions: {
+                                color: 'steelblue'
+                            },
+                        },
+                        marker: true,
+                        rectangle: false,
+                    },
+                }
+            },
+            edit: false,
+        });
+
+        map.addControl(drawControl);
+
+        //on draw run function
+        map.on('draw:created', function(e) {
+            var type = e.layerType;
+            var layer = e.layer;
+
+            layer.addTo(map);
+
+            var coordenadas = [];
+
+            if (layer instanceof L.Circle) {
+                openCreateModal();
+                document.getElementById("layerValue").value = layer;
+                document.getElementById("lat").value = layer._latlng.lat;
+                document.getElementById("lng").value = layer._latlng.lng;
+            }
+            if (layer instanceof L.Marker) {
+                openCreateModal();
+                document.getElementById("layerValue").value = layer;
+                document.getElementById("lat").value = layer._latlng.lat;
+                document.getElementById("lng").value = layer._latlng.lng;
+            }
+            if ((layer instanceof L.Polyline) && !(layer instanceof L.Polygon)) {
+                openCreateModal2();
+                document.getElementById("layerValue2").value = layer;
+                coordenadas = layer._latlngs;
+                var str_coords = "";
+                //prepare coordinates to send to php
+                coordenadas.forEach(valor => {
+                    str_coords += valor.lng + " " + valor.lat + ","
+                });
+                str_coords = str_coords.slice(0, -1);
+                str_coords.trim();
+
+                document.getElementById("coordinates").value = str_coords;
+            }
+            if ((layer instanceof L.Polygon) || (layer instanceof L.Rectangle)) {
+                openCreateModal3();
+                document.getElementById("layerValue3").value = layer;
+                coordenadas = layer._latlngs[0];
+                var str_coords = "";
+                coordenadas.forEach(valor => {
+                    str_coords += valor.lng + " " + valor.lat + ","
+                });
+                str_coords += coordenadas[0].lng + " " + coordenadas[0].lat + "";
+                str_coords.trim();
+
+                document.getElementById("coordinatespolygon").value = str_coords;
+            }
+
+            PREVENT_MAP_ONCLICK_MANTER = false;
+        });
+    </script>
+</body>
+
+</html>

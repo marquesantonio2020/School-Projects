@@ -1,0 +1,17 @@
+<layer>
+  <name>rede_ferroviaria</name>
+  <id>LayerInfoImpl--4b94eaef:1771a269b9b:-7fda</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4b94eaef:1771a269b9b:-7fd4</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fdb</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-19 18:19:46.274 UTC</dateCreated>
+  <dateModified>2021-01-19 18:23:34.377 UTC</dateModified>
+</layer>

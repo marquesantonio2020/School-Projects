@@ -1,0 +1,17 @@
+<layer>
+  <name>concelhos_2015</name>
+  <id>LayerInfoImpl--4b94eaef:1771a269b9b:-7fdc</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--5c1f50e5:17726310d27:-7ffc</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fdd</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-19 18:04:18.657 UTC</dateCreated>
+  <dateModified>2021-01-22 10:43:24.933 UTC</dateModified>
+</layer>

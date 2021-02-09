@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="roteiroViewModel"
+            type="com.example.roadtip.models.RoteiroViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".roteiro.CriarRoteiroLocais">
+
+        <ImageButton
+            android:id="@+id/backarrow"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_list_item_margin"
+            android:layout_marginTop="@dimen/small_list_item_margin"
+            android:layout_marginBottom="5dp"
+            android:background="@color/fui_transparent"
+            android:contentDescription="@string/hoteis"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/titulo_roteiros"
+            app:layout_constraintStart_toStartOf="@+id/titulo_roteiros"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/titulo_roteiros"
+            style="@style/EstiloLetraTitulos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bottom_strokes"
+            android:padding="@dimen/list_text_title"
+            android:text="@string/criarroteiro2"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/hoteis_button"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/button_round_borders"
+            android:contentDescription="@string/hoteis"
+            android:src="@drawable/icon_hotel"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toStartOf="@+id/transportes_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/restaurantes_button"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_roteiros" />
+
+        <ImageButton
+            android:id="@+id/restaurantes_button"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/button_round_borders"
+            android:contentDescription="@string/restaurantes"
+            android:src="@drawable/icon_restaurante"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toStartOf="@+id/hoteis_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_roteiros" />
+
+        <ImageButton
+            android:id="@+id/transportes_button"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/button_round_borders"
+            android:contentDescription="@string/transportes"
+            android:src="@drawable/icon_transporte"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/hoteis_button"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_roteiros" />
+
+        <ImageButton
+            android:id="@+id/museus_button"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_round_borders"
+            android:contentDescription="@string/museus"
+            android:src="@drawable/icon_museu"
+            android:layout_marginTop="@dimen/default_margin"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toStartOf="@+id/cultura_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantes_button" />
+
+        <ImageButton
+            android:id="@+id/atividades_button"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_round_borders"
+            android:contentDescription="@string/atividades"
+            android:src="@drawable/icon_atividade"
+            android:layout_marginTop="@dimen/default_margin"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cultura_button"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantes_button" />
+
+        <ImageButton
+            android:id="@+id/cultura_button"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:background="@drawable/button_round_borders"
+            android:contentDescription="@string/cultura"
+            android:src="@drawable/icon_cultura"
+            android:layout_marginTop="@dimen/default_margin"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toStartOf="@+id/atividades_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/museus_button"
+            app:layout_constraintTop_toBottomOf="@+id/restaurantes_button" />
+
+        <Button
+            android:id="@+id/criarroteiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/small_list_item_margin"
+            android:background="@drawable/button_round_borders"
+            android:padding="@dimen/small_margin"
+            android:text="@string/botãoCriar"
+            android:textColor="@color/branco"
+            android:layout_marginTop="@dimen/default_margin"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listagem_atividades_selecionados" />
+
+        <TextView
+            android:id="@+id/descricao_opcional"
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="@string/descrição_opcional"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/museus_button" />
+
+        <EditText
+            android:id="@+id/descricao_opcional_input"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:inputType="text|textMultiLine"
+            android:gravity="top"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:padding="@dimen/list_text_title"
+            android:background="@drawable/square_borders"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricao_opcional" />
+
+        <TextView
+            android:id="@+id/hashtag_opcional"
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="@string/hashtag_opcional"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descricao_opcional_input" />
+
+        <EditText
+            android:id="@+id/hashtag_opcional_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:background="@drawable/square_borders"
+            android:gravity="top"
+            android:inputType="text|textMultiLine"
+            android:padding="@dimen/list_text_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hashtag_opcional" />
+
+        <TextView
+            android:id="@+id/imagebuttonrestaurantestext"
+            style="@style/EstiloLetraSubtitulosBranco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurantes"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/restaurantes_button"
+            app:layout_constraintEnd_toEndOf="@+id/restaurantes_button"
+            app:layout_constraintStart_toStartOf="@+id/restaurantes_button" />
+
+        <TextView
+            android:id="@+id/imagembuttonhoteistext"
+            style="@style/EstiloLetraSubtitulosBranco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hoteis"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/hoteis_button"
+            app:layout_constraintEnd_toEndOf="@+id/hoteis_button"
+            app:layout_constraintStart_toStartOf="@+id/hoteis_button" />
+
+        <TextView
+            android:id="@+id/imagembuttontransportestext"
+            style="@style/EstiloLetraSubtitulosBranco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transportes"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/transportes_button"
+            app:layout_constraintEnd_toEndOf="@+id/transportes_button"
+            app:layout_constraintStart_toStartOf="@+id/transportes_button" />
+
+        <TextView
+            android:id="@+id/imagembuttonmuseustext"
+            style="@style/EstiloLetraSubtitulosBranco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/museus"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/museus_button"
+            app:layout_constraintEnd_toEndOf="@+id/museus_button"
+            app:layout_constraintStart_toStartOf="@+id/museus_button" />
+
+        <TextView
+            android:id="@+id/imagembuttonculturatext"
+            style="@style/EstiloLetraSubtitulosBranco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cultura"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cultura_button"
+            app:layout_constraintEnd_toEndOf="@+id/cultura_button"
+            app:layout_constraintStart_toStartOf="@+id/cultura_button" />
+
+        <TextView
+            android:id="@+id/imagembuttonatividadetext"
+            style="@style/EstiloLetraSubtitulosBranco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/atividades"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/atividades_button"
+            app:layout_constraintEnd_toEndOf="@+id/atividades_button"
+            app:layout_constraintStart_toStartOf="@+id/atividades_button" />
+
+        <Spinner
+            android:id="@+id/listagem_restaurantes_selecionados"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/square_borders"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_restaurantes" />
+
+        <TextView
+            android:id="@+id/adicoes_subtitulo"
+            style="@style/EstiloLetraSubtitulosPreto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            android:text="@string/adicoes"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hashtag_opcional_input" />
+
+        <TextView
+            android:id="@+id/adicoes_explicacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:text="@string/explicacao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_subtitulo"
+            app:layout_constrainedWidth="true"/>
+
+        <TextView
+            style="@style/EstiloLetraRegular"
+            android:id="@+id/adicoes_restaurantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurantes"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_explicacao" />
+
+        <TextView
+            style="@style/EstiloLetraRegular"
+            android:id="@+id/adicoes_hoteis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hoteis"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listagem_restaurantes_selecionados" />
+
+        <Spinner
+            android:id="@+id/listagem_hoteis_selecionados"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/square_borders"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_hoteis" />
+
+        <TextView
+            style="@style/EstiloLetraRegular"
+            android:id="@+id/adicoes_transportes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transportes"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listagem_hoteis_selecionados" />
+
+        <Spinner
+            android:id="@+id/listagem_transportes_selecionados"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/square_borders"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_transportes" />
+
+        <TextView
+            style="@style/EstiloLetraRegular"
+            android:id="@+id/adicoes_museus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/museus"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listagem_transportes_selecionados" />
+
+        <Spinner
+            android:id="@+id/listagem_museus_selecionados"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/square_borders"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_museus" />
+
+        <TextView
+            style="@style/EstiloLetraRegular"
+            android:id="@+id/adicoes_cultura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cultura"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listagem_museus_selecionados" />
+
+        <Spinner
+            android:id="@+id/listagem_cultura_selecionados"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/square_borders"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_cultura" />
+
+        <TextView
+            style="@style/EstiloLetraRegular"
+            android:id="@+id/adicoes_atividades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/atividades"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listagem_cultura_selecionados" />
+
+        <Spinner
+            android:id="@+id/listagem_atividades_selecionados"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@drawable/square_borders"
+            android:spinnerMode="dialog"
+            android:layout_marginTop="@dimen/list_text_title"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adicoes_atividades" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

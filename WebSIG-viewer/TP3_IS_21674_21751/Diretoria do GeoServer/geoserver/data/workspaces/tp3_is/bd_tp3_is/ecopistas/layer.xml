@@ -1,0 +1,17 @@
+<layer>
+  <name>ecopistas</name>
+  <id>LayerInfoImpl--4b94eaef:1771a269b9b:-7fcb</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--4b94eaef:1771a269b9b:-7fcf</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--4b94eaef:1771a269b9b:-7fcc</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+  <dateCreated>2021-01-19 18:55:19.645 UTC</dateCreated>
+  <dateModified>2021-01-19 18:58:03.278 UTC</dateModified>
+</layer>

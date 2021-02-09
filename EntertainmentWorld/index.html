@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EntertainmentWorld</title>
+
+  <link rel="icon" href="./img/Star_icon_stylized.png" type="image/ico">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+
+  <!--Custom icons for this template-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/bioworld.min.css" rel="stylesheet">
+  <link href="css/mycss.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body styles="background-color: #FBE0E0 !important;">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Entertainment World</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="http://localhost:81/SIR2020_2021/EntertainmentWorld/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost:81/SIR2020_2021/EntertainmentWorld/comingSoon.html">Coming Soon</a>
+          </li>
+          <li class="nav-item">
+            <a href="http://localhost:81/SIR2020_2021/EntertainmentWorld/inTheaters.html">In Theaters</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/background.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Entertainment World</h1>
+            <span class="subheading">All movies and animes one click away</span>
+            <form id="searchBar" class="searchBar" action="listing.html" method="GET">
+              <i class="fa fa-search" id="searchIcon"></i>
+              <input name="search" id="search" class="form-control search" type="text"
+                placeholder="You type and I provide" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="display col-lg-8 col-md-10 mx-auto">
+        <div id="search-results">
+          <section>
+            <h3>Most Popular Movies</h3>
+            <div id="movieDisplay" class="kemicofa-row">
+
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="display col-lg-8 col-md-10 mx-auto">
+        <div id="search-results">
+          <section>
+            <h3>Most Popular Tv Series</h3>
+            <div id="tvDisplay" class="kemicofa-row">
+
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="display col-lg-8 col-md-10 mx-auto">
+        <div id="search-results">
+          <section>
+            <h3>Most Popular Anime</h3>
+            <div id="animeDisplay" class="kemicofa-row">
+
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+  <div class="container">
+    <h3>Entertainment News</h3>
+    <div class="row">
+      <div id="list" class="col-lg-8 col-md-10 mx-auto">
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer style="background-color: gray;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center list">
+            <li class="list-inline-item">
+
+              <img src='./img/imdb_api.png' style="width: 100px; height: 100px;">
+              <p>IMDB API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/myapifilms.PNG' style="width: 100px; height: 100px;">
+              <p>MYAPIFILMS API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/newsapi.PNG' style="width: 100px; height: 100px;">
+              <p>NEWSAPI API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/kitsuapi.png' style="width: 100px; height: 100px;">
+              <p>KITSU API</p>
+            </li>
+            <li class="list-inline-item">
+
+              <img src='./img/jinkanapi.png' style="width: 100px; height: 100px;">
+              <p>JINKAN API</p>
+            </li>
+          </ul>
+          <p class="copyright text-muted" style="color: black !important;">Copyright &copy; António Marques - IPVC-ESTG 2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $(this).on('keypress', function (e) {
+      if (e.keyCode == 13) {
+        const searchType = $('#search').val();
+        if (searchType === "") {
+          alert('Please type something on the search bar')
+        } else {
+          var url = "http://localhost:81/SIR2020_2021/EntertainmentWorld/listing.html?search=" + searchType;
+          window.location.assign(url);
+        }
+      }
+    })
+
+    $('#searchIcon').click(function () {
+      const searchType = $('#search').val();
+      if (searchType === "") {
+        alert('Please type something on the search bar')
+      } else {
+        var url = "http://localhost:81/SIR2020_2021/EntertainmentWorld/listing.html?search=" + searchType;
+        window.location.assign(url);
+      }
+    });
+  })
+</script>
+
+<script src="./projectJS/tops.js"></script>
+<script src="./projectJS/news.js"></script>
+
+</html>

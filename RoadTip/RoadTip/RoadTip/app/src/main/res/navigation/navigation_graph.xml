@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_menu"
+    app:startDestination="@id/mainScreen2">
+    <fragment
+        android:id="@+id/mainScreen2"
+        android:name="com.example.roadtip.mainscreen.MainScreen"
+        android:label="MainScreen"
+        tools:layout="@layout/fragment_main_screen"/>
+    <fragment
+        android:id="@+id/roteiros"
+        android:name="com.example.roadtip.roteiro.Roteiros"
+        android:label="fragment_roteiros"
+        tools:layout="@layout/fragment_roteiros" />
+    <fragment
+        android:id="@+id/criarRoteiroCidade"
+        android:name="com.example.roadtip.roteiro.CriarRoteiroCidade"
+        android:label="CriarRoteiroCidade" >
+        <action
+            android:id="@+id/action_criarRoteiroCidade_to_criarRoteiroLocais"
+            app:destination="@id/criarRoteiroLocais"
+            app:popUpTo="@+id/criarRoteiroCidade" />
+    </fragment>
+    <fragment
+        android:id="@+id/criarRoteiroLocais"
+        android:name="com.example.roadtip.roteiro.CriarRoteiroLocais"
+        android:label="CriarRoteiroLocais" >
+        <argument
+            android:name="nome"
+            app:argType="string" />
+        <argument
+            android:name="local"
+            app:argType="string" />
+        <argument
+            android:name="pais"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_criarRoteiroLocais_to_restaurantes"
+            app:destination="@id/restaurantes"
+            app:popUpTo="@+id/criarRoteiroLocais"
+            app:popUpToInclusive="true" />
+        <argument android:name="restaurantes"
+            app:argType="string[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="descricaoRoteiro"
+            app:argType="string" />
+        <argument
+            android:name="hashtags"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantes"
+        android:name="com.example.roadtip.restaurantes.Restaurantes"
+        android:label="fragment_restaurantes"
+        tools:layout="@layout/fragment_restaurantes" >
+        <action
+            android:id="@+id/action_restaurantes_to_criarRoteiroLocais"
+            app:destination="@id/criarRoteiroLocais" />
+        <argument
+            android:name="nome"
+            app:argType="string" />
+        <argument
+            android:name="pais"
+            app:argType="string" />
+        <argument
+            android:name="local"
+            app:argType="string" />
+        <argument
+            android:name="restaurantes"
+            app:argType="string[]" />
+        <argument
+            android:name="descricaoRoteiro"
+            app:argType="string" />
+        <argument
+            android:name="hashtags"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/descricaoRestaurante"
+        android:name="com.example.roadtip.restaurantes.DescricaoRestaurante"
+        android:label="DescricaoRestaurante" >
+        <action
+            android:id="@+id/action_descricaoRestaurante_to_restaurantes"
+            app:destination="@id/restaurantes" />
+    </fragment>
+</navigation>

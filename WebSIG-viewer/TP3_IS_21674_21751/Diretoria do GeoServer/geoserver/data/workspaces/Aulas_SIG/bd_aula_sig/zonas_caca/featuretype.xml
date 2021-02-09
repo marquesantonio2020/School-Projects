@@ -1,0 +1,44 @@
+<featureType>
+  <id>FeatureTypeInfoImpl-52320065:176f64f7a43:-7fe3</id>
+  <name>zonas_caca</name>
+  <nativeName>zonas_caca</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl-52320065:176f64f7a43:-7ffe</id>
+  </namespace>
+  <title>zonas_caca</title>
+  <keywords>
+    <string>zonas_caca</string>
+    <string>features</string>
+  </keywords>
+  <srs>EPSG:3763</srs>
+  <nativeBoundingBox>
+    <minx>-117814.3671875</minx>
+    <maxx>162122.453125</maxx>
+    <miny>-294487.375</miny>
+    <maxy>275787.03125</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>-9.558291483266347</minx>
+    <maxx>-6.172199136721854</maxx>
+    <miny>37.001314171404104</miny>
+    <maxy>42.15134536680279</maxy>
+    <crs>EPSG:4326</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl-52320065:176f64f7a43:-7ffc</id>
+  </store>
+  <serviceConfiguration>false</serviceConfiguration>
+  <simpleConversionEnabled>false</simpleConversionEnabled>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <padWithZeros>false</padWithZeros>
+  <forcedDecimal>false</forcedDecimal>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>

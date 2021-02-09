@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "210509884240",
+    "firebase_url": "https://roadtip-c7b56.firebaseio.com",
+    "project_id": "roadtip-c7b56",
+    "storage_bucket": "roadtip-c7b56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210509884240:android:5ba1d88059b5da50cc5a55",
+        "android_client_info": {
+          "package_name": "com.example.roadtip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210509884240-0m1hv78mbr9no01o4h1pcc7ldv66k8gh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roadtip",
+            "certificate_hash": "9bdcacb20f5f3758f594f44e23c13b49ea4f7531"
+          }
+        },
+        {
+          "client_id": "210509884240-1kvt30kmmbk91g40kovu0rbfer7j6ka9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl3CwGzuSsIn9TE0-T65pq9SDZ-XwceCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210509884240-1kvt30kmmbk91g40kovu0rbfer7j6ka9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

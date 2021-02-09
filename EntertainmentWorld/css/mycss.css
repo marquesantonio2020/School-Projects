@@ -1,0 +1,207 @@
+form.searchBar{
+    background-color: white;
+    border-radius: 20px;
+    border-color: #ff7f50;
+    border-width: thick;
+    border: 4px solid#c00202;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  
+  }
+  
+   form.searchBar > input{
+     flex: 1;
+     height: 40px;
+     border: none;
+     outline: none;
+     font-size: 18px;
+     padding-left: 10px;
+     padding-right: 10px;
+     margin-right: 15px;
+   }
+  
+   form.searchBar > i {
+    float: left;
+    margin-left: 15px;
+    background: white;
+    color:black;
+    border: none;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  #searchContainer{
+    background-color: #808080c2;
+    padding: 0px 5px 10px 5px;
+    margin: 320px 0px 0px 0px;
+  }
+
+  .cardFooter {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.cardFooter > p{
+    display: inline-block !important;
+    margin-bottom: auto;
+}
+
+#descriptionImage img {
+  float: left;
+  width: -webkit-fill-available;
+  height: 350px;
+  background: #555;
+}
+
+#descriptionImage h3 {
+  font-size: 2rem;
+  top: 18px;
+  left: 10px;
+}
+
+.post-preview>a>div{
+  overflow: auto;
+  border: orangered;
+}
+
+.post-preview>a>div>.postSubtitle {
+  font-weight: 300;
+  margin: 0 0 10px;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+.post-preview>a>div>h3{
+  float:left;
+} 
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/*Reference: https://github.com/kemicofa/AnimeAPICodingChallenge*/
+.kemicofa-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: scroll !important;
+    justify-content: stretch !important;
+}
+
+.kemicofa-row > * {
+    flex-basis: 20rem !important;
+    flex-shrink: 0 !important;
+}
+
+.kemicofa-row .card {
+    display: flex !important;
+    flex-direction: column !important;
+
+}
+
+.kemicofa-row .card > .card-content {
+    flex-grow: 1;
+    height: 300px !important;
+    padding: 15px 24px 15px 24px;
+}
+
+.kemicofa-row .card > .card-image {
+    flex-basis: 25rem !important;
+    flex-shrink: 0 !important;
+    overflow-y: hidden !important;
+    background-color: grey !important;
+}
+/*End of reference*/
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.display {
+  padding-right: 0px !important;
+
+}
+
+@media (min-width: 992px){
+.display {
+    max-width: 100% !important;
+}
+}
+
+.cardFooter{
+  padding: 1px 10px;
+}
+.card-content{
+  padding-right: 12px;
+}
+
+img.movieImg{
+  width: 290px !important;
+  height: 370px !important;
+}
+
+p #card-text{
+  display: flex !important;
+  font-size: larger !important;
+}
+
+a{
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 10% 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.5);
+  ;
+}
+
+li a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#navHeader{
+  margin-left: 15%;
+  color: white;
+}
+
+#navigation{
+  background-color: #c00202;
+  display: flex;
+  width: 100%;
+}
+
+.slideImages{
+  width: 100%;
+  height: 50%;
+}

@@ -1,0 +1,18 @@
+<wmsStore>
+  <id>WMSStoreInfoImpl-52320065:176f64f7a43:-7fdd</id>
+  <name>Biogenetic Reserves</name>
+  <type>WMS</type>
+  <enabled>true</enabled>
+  <workspace>
+    <id>WorkspaceInfoImpl-52320065:176f64f7a43:-7fff</id>
+  </workspace>
+  <metadata>
+    <entry key="useConnectionPooling">true</entry>
+  </metadata>
+  <__default>false</__default>
+  <dateCreated>2021-01-12 14:21:17.90 UTC</dateCreated>
+  <capabilitiesURL>http://si.icnf.pt/wms/reservas_biogeneticas</capabilitiesURL>
+  <maxConnections>6</maxConnections>
+  <readTimeout>60</readTimeout>
+  <connectTimeout>30</connectTimeout>
+</wmsStore>
